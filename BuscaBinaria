@@ -1,0 +1,25 @@
+def busca_binaria(lista, alvo):
+    esquerda, direita = 0, len(lista) - 1
+
+    while esquerda <= direita:
+        meio = (esquerda + direita) // 2
+
+        if lista[meio] == alvo:
+            return meio  # O elemento foi encontrado
+        elif lista[meio] < alvo:
+            esquerda = meio + 1
+        else:
+            direita = meio - 1
+
+    return -1  # O elemento não foi encontrado
+
+# Exemplo de uso
+minha_lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+elemento = 6
+
+resultado = busca_binaria(minha_lista, elemento)
+
+if resultado != -1:
+    print(f"O elemento {elemento} foi encontrado na posição {resultado}.")
+else:
+    print(f"O elemento {elemento} não foi encontrado na lista.")
