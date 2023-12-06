@@ -31,7 +31,7 @@ def merge_sort_descending(arr):
 
 # Exemplo de uso
 if __name__ == "__main__":
-    # Substitua esta lista pela que você deseja ordenar
+
     lista = [64, 25, 12, 22, 11]
 
     print("Lista original:", lista)
