@@ -1,0 +1,19 @@
+def quicksort_descending(arr):
+    if len(arr) <= 1:
+        return arr
+    else:
+        pivot = arr[0]
+        less = [x for x in arr[1:] if x >= pivot]
+        greater = [x for x in arr[1:] if x < pivot]
+        return quicksort_descending(greater) + [pivot] + quicksort_descending(less)
+
+# Exemplo de uso
+if __name__ == "__main__":
+    # Substitua esta lista pela que você deseja ordenar
+    lista = [64, 25, 12, 22, 11]
+
+    print("Lista original:", lista)
+
+    lista_ordenada = quicksort_descending(lista)
+
+    print("Lista ordenada decrescente:", lista_ordenada)
